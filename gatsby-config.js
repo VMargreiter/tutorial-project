@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
