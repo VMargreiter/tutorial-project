@@ -1,7 +1,26 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require ('path')
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions}) => {
+    const { createPage } = actions 
+    return graphql(`
+        query allPages {
+            allWpPage {
+                nodes {
+                  id
+                  uri
+                }
+              }
+            }
+    `).then(result => {
+        result.data.allWpPage.nodes.forEach(node => {
+            createPage({
+              path: node.uri,
+              component: path.resolve(`./src/templates/homepage.js`),
+              context: {
+                id: node.id
+              },
+            })
+        })
+    })
+
+}

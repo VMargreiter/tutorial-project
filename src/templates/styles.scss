@@ -1,0 +1,12 @@
+$font-stack: "Montserrat";
+
+body {
+    font-family: $font-stack;
+    background-color: black;
+    color: white;
+}
+
+h1 .hero-text {
+    color: rgb(217,154,10);
+    font-variant: small-caps;
+}
