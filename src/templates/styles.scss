@@ -10,3 +10,30 @@ h1 .hero-text {
     color: rgb(217,154,10);
     font-variant: small-caps;
 }
+
+.navbar-container {
+    background-color: black;
+    display: inline-block;
+}
+
+.navbar-logo {
+    max-width: 300px;
+}
+
+.navbar-options-container {
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 0px;
+}
+
+.navbar-option {
+    padding: 20px;
+}
+
+.navbar-item {
+    color: white;
+    text-decoration:none;
+    font-size: 30px;
+    font-weight: 300;
+}
